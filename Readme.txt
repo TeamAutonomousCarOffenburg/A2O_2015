@@ -1,9 +1,8 @@
-This is the entry point of the AADC Software
+Audi Autonomous Driving Cup 2015 - Applied Autonomy Offenburg Entry
 
-Folders:
-* src: Here are the source of AADC Base, AADC User and AADC Demo with all the filters and the sample code.
-* bin: Here are the binaries of all the filters. User filter will also be created here.
-* config: Here are the ADTF Configurations including the Example Configuration, the User Configuration and the Base Configuration.
-* configuration_files: Here are severel configuration files for the camera, the calibration or the marker detection.
-* description: Here are the Description-Files for the Filters saved.
-* doc: Here is the source code documentation located.
+Please consider the license information provided with this repository. You should have received a copy (License.txt).
+
+External dependencies: Eigen3, openCV, ADTF, OpenSceneGraph, PointCloudLibrary, aruco
+
+Note: Some parts of this project are written in the C++11 Standard! For compilation issues, please see "src/aadcUser/src/HSOG_Runtime/adtf/BUILD.txt".
+
