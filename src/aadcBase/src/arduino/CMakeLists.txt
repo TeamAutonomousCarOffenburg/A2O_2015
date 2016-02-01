@@ -1,0 +1,3 @@
+add_subdirectory(AADC_ArduinoActuators)
+add_subdirectory(AADC_ArduinoCommunication)
+add_subdirectory(AADC_ArduinoSensors)

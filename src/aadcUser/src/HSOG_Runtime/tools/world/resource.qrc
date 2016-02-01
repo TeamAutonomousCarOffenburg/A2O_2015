@@ -1,0 +1,16 @@
+<RCC>
+    <qresource>
+        <file>res/Crossing.png</file>
+        <file>res/ForceStraight.png</file>
+        <file>res/GiveWay.png</file>
+        <file>res/NoEntry.png</file>
+        <file>res/NoMatch.png</file>
+        <file>res/NoOvertaking.png</file>
+        <file>res/OneWayStreet.png</file>
+        <file>res/Parking.png</file>
+        <file>res/PedestrianCrossing.png</file>
+        <file>res/PriorityLane.png</file> 
+        <file>res/Roundabout.png</file>
+        <file>res/Stop.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+PersistentVector.h RBBVector.h
+
+Based on the clojure datastructures, should be very performant.
+taken from: https://github.com/elnopintan/gorgone
+
+Licensed under EPL, which basically means we can use the module in any way, but if we make modifications to it, we have to release the module under EPL.

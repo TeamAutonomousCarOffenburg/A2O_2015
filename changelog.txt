@@ -1,0 +1,8 @@
+v.1.1
+* State Controller v.1.1.0: Added input pin for Filter State Controller to receive the manuever list from the Jury Application.
+* Driver Module v.1.1.0: Added input pin for Filter Driver Module to receive the manuever list from the Jury Application.
+* Descriptions: Added DDL Description for tManeuverList
+* Configurations: Major Changes in the Configurations: Splitted the Example Configuration to several single configurations.
+* Arduino Actuators v.1.0.1: The turn signals are automatically switched off if the other side is turned on
+* Wheel Speed Converter v.1.0.1: Reduced the number of warning if sensors measures different speeds
+* Marker Detection v.1.0.1: Deleted an old LOG_INFO output

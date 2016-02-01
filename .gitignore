@@ -1,0 +1,7 @@
+*~*
+*swp
+*.kdev4*
+*.idea*
+calibration_files
+bin
+hsog_log_*.csv

@@ -1,0 +1,48 @@
+if there are errors compiling the filters on the car that look like this:
+
+apply the patch on:
+https://bugreports.qt.io/secure/attachment/26357/qt-4.8.patch
+
+--- /usr/include/QtCore/qobjectdefs.h	2011-10-04 05:44:32.000000000 +0200
++++ /home/lrineau/trunk/Maintenance/infrastructure/renoir.geometryfactory.com/reference-platforms/x86-64_Linux-2.6_g++-trunk_CXX0X-F16/include/QtCore/qobjectdefs.h	2011-11-21 18:23:54.915072032 +0100
+@@ -219,7 +219,7 @@
+#define QTOSTRING_HELPER(s) #s
+#define QTOSTRING(s) QTOSTRING_HELPER(s)
+#ifndef QT_NO_DEBUG
+-# define QLOCATION "\0"__FILE__":"QTOSTRING(__LINE__)
++# define QLOCATION "\0" __FILE__ ":" QTOSTRING(__LINE__)
+# ifndef QT_NO_KEYWORDS
+#  #  define METHOD(a)   qFlagLocation("0"#a QLOCATION)
+#   # endif
+
+to
+/opt/arm-linux-gnueabihf/SDK/gcc-4.6/Qt/4.7.1/include/QtCore/qobjectdefs.h 
+
+otherwise qt 4.7.1 cannot be compiled with std=c++11
+
+
+
+ADTF has similar problems with std=c++11. In order to resolve them, go to
+/opt/adtf/2.13.1/include/sdk/adtf_constants.h
+and change lines 1042 and so on to include a space between two literals.
+
+============================== Example ==============================
+/// XML header for the plugin description files
+#define PLUGIN_DESCRIPTION_HEADER           "<?xml version=\"1.0\" encoding=\"iso-8859-1\" standalone=\"no\"?>\n \
+                                             <" PLUGIN_DESCRIPTION_XML_ROOT " xmlns:adtf=\"adtf\">\n \
+                                             </" PLUGIN_DESCRIPTION_XML_ROOT ">"
+
+/// Filter description xml root name
+#define FILTER_DESCRIPTION_XML_ROOT         "adtf:filter"
+/// XML header for the filter description files
+#define FILTER_DESCRIPTION_HEADER           "<?xml version=\"1.0\" encoding=\"iso-8859-1\" standalone=\"no\"?>\n \
+                                             <" FILTER_DESCRIPTION_XML_ROOT " xmlns:adtf=\"adtf\">\n \
+                                             </" FILTER_DESCRIPTION_XML_ROOT ">"
+
+/// Filter description xml root name
+#define SERVICE_DESCRIPTION_XML_ROOT        "adtf:service"
+/// XML header for the service description files
+#define SERVICE_DESCRIPTION_HEADER          "<?xml version=\"1.0\" encoding=\"iso-8859-1\" standalone=\"no\"?>\n \
+                                             <" SERVICE_DESCRIPTION_XML_ROOT " xmlns:adtf=\"adtf\">\n \
+                                             </" SERVICE_DESCRIPTION_XML_ROOT ">"
+======================================================================
